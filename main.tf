@@ -13,3 +13,7 @@ module "aks" {
     ARM_CLIENT_SECRET     = var.ARM_CLIENT_SECRET
     prefix                = var.prefix
 }
+
+output "kubernetes_cluster_name" {
+   value = module.aks.kubernetes_cluster_name
+}
